@@ -10,11 +10,15 @@ public class SalaryCounter {
             // 0 - עובד זוטר, 1 - עובד בכיר
             worker = scanner.nextInt();
             if (worker == 1 || worker == 0) {
-                System.out.println("Please enter the number of hours he worked: ");
-                workHours = scanner.nextInt();
-                System.out.println("Please enter the number of days the worker got a bonus: ");
-                bonusDays = scanner.nextInt();
-                workersSalaryCounter(worker, workHours, bonusDays);
+                do{
+                   System.out.println("Please enter the number of hours he worked: ");
+                   workHours = scanner.nextInt();
+                } while (workHours < 0);
+                do {
+                    System.out.println("Please enter the number of days the worker got a bonus: ");
+                    bonusDays = scanner.nextInt();
+                } while (bonusDays < 0);
+                 workersSalaryCounter(worker, workHours, bonusDays);
                 System.out.println("If you want to stop now, enter any number except 0 and 1: ");
             }
             else {
