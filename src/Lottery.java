@@ -5,7 +5,6 @@ public class Lottery {
     public static void main(String[] args) {
         Random random = new Random();
         int luckyNumber = random.nextInt(1000) + 1;
-        System.out.println(luckyNumber);
         int num1, num2;
         int counter1 = 1;
         int counter2 = 1;
